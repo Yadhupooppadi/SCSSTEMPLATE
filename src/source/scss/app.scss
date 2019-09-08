@@ -1,0 +1,191 @@
+
+/*------------ Import External SCSS ------------*/
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "app/fontsheet";
+@import "app/colourstyle";
+@import "app/animate";
+@import 'app/mixins';  
+@import "app/fancybox.min";
+@import "../../node_modules/plyr/src/sass/plyr.scss";
+@import 'pages/template';
+@import 'pages/header';  
+@import 'pages/footer';
+@import 'pages/home';
+@import 'pages/contact';
+@import 'pages/about';
+@import 'pages/whatwedo';
+@import 'pages/ourworks';
+@import 'pages/blog';
+
+@function letterSpaces($font, $space) {
+    $letterSize: $space / 1000 * $font / 16px;
+    @return #{$letterSize}rem;
+}
+@mixin letterSpace($font, $space) {
+    letter-spacing: letterSpaces($font, $space);
+}
+@function cr($size) {
+    $remSize: $size / 16px; //Default font size on html element is 100%, equivalent to 16px;
+    @return #{$remSize}rem;
+}
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: cr($size);
+}
+@mixin flexbox {
+    display: -ms-flexbox;
+    display: flex;
+}
+@mixin inline-flexbox {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+@mixin flex($values) {
+    -ms-flex: $values;
+    flex: $values;
+}
+@mixin flexwidth($values) {
+    -ms-flex: 0 0 $values;
+    flex: 0 0 $values;
+    max-width: $values;
+}
+@mixin flex-direction($direction) {
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+}
+@mixin flex-wrap($wrap) {
+    -ms-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+}
+@mixin flex-flow($flow) {
+    -ms-flex-flow: $flow;
+    flex-flow: $flow;
+}
+@mixin order($val) {
+    -ms-flex-order: $val;
+    order: $val;
+}
+@mixin flex-grow($grow) {
+    -ms-flex-positive: $grow;
+    flex-grow: $grow;
+}
+@mixin flex-shrink($shrink) {
+    -ms-flex-negative: $shrink;
+    flex-shrink: $shrink;
+}
+@mixin flex-basis($width) {
+    -ms-flex-preferred-size: $width;
+    flex-basis: $width;
+}
+@mixin justify-content($justify) {
+    @if $justify == "start" {
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+    @else if $justify == "end" {
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+    @else if $justify == "center" {
+        -ms-flex-pack: $justify;
+        justify-content: $justify;
+    }
+    @else if $justify == "between" {
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    @else if $justify == "around" {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+    @else {}
+}
+@mixin align-content($align) {
+    @if $align == "start" {
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+    }
+    @else if $align == "end" {
+        -ms-flex-line-pack: end;
+        align-content: flex-end;
+    }
+    @else if $align == "center" {
+        -ms-flex-line-pack: $align;
+        align-content: $align;
+    }
+    @else if $align == "between" {
+        -ms-flex-line-pack: justify;
+        align-content: space-between;
+    }
+    @else if $align == "around" {
+        -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    }
+    @else if $align == "stretch" {
+        -ms-flex-line-pack: $align;
+        align-content: $align;
+    }
+    @else {}
+}
+@mixin align-items($align) {
+    @if $align == "start" {
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    @else if $align == "end" {
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+    @else if $align == "center" {
+        -ms-flex-align: $align;
+        align-items: $align;
+    }
+    @else if $align == "baseline" {
+        -ms-flex-align: $align;
+        align-items: $align;
+    }
+    @else if $align == "stretch" {
+        -ms-flex-align: $align;
+        align-items: $align;
+    }
+    @else {}
+}
+@mixin align-self($align) {
+    @if $align == "auto" {
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+    @else if $align == "start" {
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+    }
+    @else if $align == "end" {
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+    }
+    @else if $align == "center" {
+        -ms-flex-item-align: $align;
+        align-self: $align;
+    }
+    @else if $align == "baseline" {
+        -ms-flex-item-align: $align;
+        align-self: $align;
+    }
+    @else if $align == "stretch" {
+        -ms-flex-item-align: $align;
+        align-self: $align;
+    }
+    @else {}
+}
+@mixin flexcenter {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+}
+@import "normalize";
+@import "materialinput";
+@import "waypointanim";
+

@@ -1,0 +1,246 @@
+.workHolder{
+	background-color: $white;
+	@include breakpoint(mn768){
+		 padding-bottom: 40px;
+	}
+	.xaqNavigation__Tab{ 
+		padding-top: 20px;
+		padding-bottom: 50px;
+		@include breakpoint(mx991){
+			display: block!important;
+			padding-bottom: 20px;
+		}
+		strong{
+			color: #918F8F;
+			@include themefont(bold);
+		}
+		.tabNavigation{
+			margin-left: auto;
+			button{
+				@include themefont(light);
+				color: $black;
+				background-color: $white;
+				margin-left: 25px;  
+				position: relative;
+				@include breakpoint(mx991){
+					@include themefont(bold);
+					font-size: 12px;
+					margin-left: 0; 
+				}
+				&::after{
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					content:'';
+					width: 0;
+					height: 2px;
+					@include transition(all .4s);
+				}	
+				&.mixitup-control-active{
+					&::after{
+						width: 100%;
+						background-color: #CCC06D;
+					}
+				}
+			}
+		}
+	}
+	.xaqTab__Container{
+		display: flex;
+		flex-wrap: wrap;
+		.xaqTab__List{
+			padding-bottom: 45px;
+			@include breakpoint(mx767){
+				padding-right: 5px;
+				padding-left: 5px;
+			}
+			figure{  
+				margin-bottom: 0;
+				@include breakpoint(mx767){
+					background-color: #f6f6f6;
+				}
+				img{
+					width: 100%;
+				}
+			}
+			figcaption{
+			    padding-top: 30px;
+				@include breakpoint(mx767){
+					background-color: #f6f6f6;
+					padding: 15px;
+					padding-top: 18px;
+				}
+				h3{
+					@include themefont(bold);
+					font-size: 20px;
+					line-height: 40px;
+					@include breakpoint(mx767){
+						font-size: 13px;
+						line-height: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+.workHolder_Details{
+    padding-bottom: 30px;
+	background-color: $white;
+	@include breakpoint(mx767){
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.article{
+		h2{
+			@include themefont(bold);
+			font-size: 26px;
+			line-height: 40px;
+			margin-bottom: 20px;
+			@include breakpoint(mx767){
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+	}
+	.banerContainer{
+		@include breakpoint(mx767){
+		    max-width: 100%;
+			padding: 0;
+			height: 250px;
+			order: -1;
+			margin-bottom: 30px;
+		}
+		.baner{
+			padding-top: 40px;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.sectionHolder{
+		padding: 45px 0;
+		border-bottom: solid 2px #B2B2B2;
+		&:last-child{
+			border-bottom: none;
+		}
+		@include breakpoint(mx767){
+			display: block!important;
+		}
+		h2{
+			padding-right: 165px;
+			@include lightColourTitle();
+			font-size: 35px;
+			@include breakpoint(mx1024){
+				padding-right: 25px;
+			}
+		}
+		.contentSection{
+			h3{
+				@include themefont(bold);
+				font-size: 26px;
+				line-height: 40px;
+				margin-bottom: 20px;
+				@include breakpoint(mx991){
+					font-size: 16px;  
+					line-height: 24px;
+				}
+			}
+			p{
+				@include themefont(light);
+				font-size: 18px;
+				@include breakpoint(mx767){
+					font-size: 15px;
+				}
+			}
+			.iconRow{
+				padding-top: 30px;
+				@include breakpoint(mx767){
+					flex-wrap: wrap;
+				}
+				a{
+					margin: 20px;
+					@include breakpoint(mx1279){
+						margin: 20px 0;
+					}
+					@include breakpoint(mx767){
+						flex: 0 0 50%;
+						max-width: 50%;
+					}
+					.mediaIcons{
+						width: 120px;
+						height: 120px;
+						background-color: $black;
+						@include border-radius(50%);
+						margin: 0 auto 15px auto;
+						@include breakpoint(mx1279){
+						    width: 95px;
+							height: 95px;
+						}
+						@include breakpoint(mx767){
+							width: 70px;
+							height: 70px;
+						}
+						svg{
+							width: 30px;
+							height: 35px;
+							margin: 0 auto;
+							@include breakpoint(mx767){
+							    width: 18px;
+								height: 25px;
+							}
+						}
+					}
+					strong{
+						text-align: center;
+						width: 122px;
+						display: block;
+						color: $black;
+						@include themefont(regular);
+						margin: 0 auto;
+					}
+				}
+			}
+			.accordion{
+			    padding-top: 35px;
+				.card{
+					border: none;
+					.card-header{
+						padding-left: 0;
+						border-bottom: solid 1px #D4D4D4;
+						background: #fff;
+						button{
+							text-decoration: none;
+							color: $black;
+							@include themefont(bold);
+							font-size: 16px;
+							line-height: 22px;
+							margin-bottom: 0px;
+							padding-left: 0;
+							@include breakpoint(mx991){
+								font-size: 16px;  
+								line-height: 24px;
+							}
+						}
+					}
+					.card-body{
+						padding-left: 0;
+					}
+				}
+			}
+			.projectRow{
+				padding-top: 30px;
+				margin-right: -8px;
+				margin-left: -8px;
+				.projectCol{
+				    padding: 0 8px;
+					img{
+						width: 100%;
+					}
+				}
+			}
+			.viewMore{
+				@include viewMoreButton();
+			}
+		}
+	}
+}

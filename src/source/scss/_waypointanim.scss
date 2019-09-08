@@ -1,0 +1,94 @@
+[data-wy], [data-wynooff] {
+    visibility: hidden;
+    animation-name: none;
+
+    &.wy-mode {
+        animation-fill-mode: both;
+    }
+    &.wy-anim {
+        visibility: visible;
+        animation-duration: 0.8s;
+        animation-name: fadeInSm;
+
+        &.wy-dwn {
+            animation-name: fadeInBm;
+        }
+
+        &.wy-lft {
+            animation-name: fadeInRs;
+        }
+
+        &.wy-rht {
+            animation-name: fadeInLs;
+        }
+
+        &.wy-zom {
+            animation-name: boomIn;
+            animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        &.wy-crd {
+            animation-duration: 1.6s;
+            animation-name: rotateCard;
+            animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+    }
+}
+
+$show-numbers: true;
+
+@if $show-numbers {
+    @for $i from 1 through 12 {
+        [data-wy='#{$i}'] {
+            animation-delay: $i * 0.075s;
+        }
+    }
+}
+
+@-webkit-keyframes boomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3) rotate(90deg);
+        transform: scale3d(0.3, 0.3, 0.3) rotate(90deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes boomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3) rotate(90deg);
+        transform: scale3d(0.3, 0.3, 0.3) rotate(90deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes rotateCard {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3) rotate(90deg);
+        transform: scale3d(0.3, 0.3, 0.3) rotate(90deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateCard {
+    from {
+        opacity: 0;
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}

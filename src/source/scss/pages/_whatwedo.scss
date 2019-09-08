@@ -1,0 +1,48 @@
+.serviceHolder{
+	padding-bottom: 80px;
+	background-color: $white;
+	.serviceRow{
+		position: relative;
+		hr{
+		
+		}
+		.serviceArticle {
+			position: relative;
+			padding-top: 65px;
+			padding-left: 60px;
+			padding-bottom: 80px;
+			@include breakpoint(mx1199){
+				padding-top: 0;
+				padding-left: 15px;
+			}
+			@include breakpoint(mx767){
+				padding-top: 25px;
+				padding-bottom: 0;
+			}
+			h2{
+				@include templateTitle();
+				margin-bottom: 20px;
+			}
+			.viewMore{
+			    position: absolute;
+				bottom: 20px;
+				@include viewMoreButton();
+				@include breakpoint(mx767){
+					position: relative;
+				}
+				svg{
+					margin-left: auto!important;
+					margin-right: 20px;
+				}
+			}
+		}
+		.banerImage{
+		@include breakpoint(mx767){
+			order: -1;
+		}
+			img{
+				width: 100%;
+			}
+		}
+	}
+}

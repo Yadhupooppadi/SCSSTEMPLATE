@@ -1,0 +1,178 @@
+.contactHolder{
+	position: relative;	
+	@include breakpoint(mx767){
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&.contact{
+		background-color: $themeBg01;
+		.addresHolder{
+			padding: 40px 0 40px 70px;
+			border-bottom: solid 1px #ececec;
+			@include breakpoint(mx991){
+				padding: 40px 0 40px 0;
+			}
+			h4{
+				font-size: 19px;
+				margin-bottom: 20px;
+			}
+			p{
+				font-size: 18px;
+				line-height: 26px;
+				a{
+					color: $black;
+				}
+			}
+			.xaQ-Btn{
+				width: 160px;
+				text-align: center;
+				font-size: 11px;
+				color: $white;
+				background-color: $black;
+				text-transform: uppercase;
+				padding: 10px 20px;
+				margin-top: 30px;
+				display: inline-block;
+				i{
+					margin-left: 10px;
+				}
+			}
+		}
+		figure{
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			@include breakpoint(mx767){
+				width: 100%;
+				height: 200px;
+				position: relative;
+				order: -1;
+			}
+		}
+	}
+}
+.mapHolder{
+	position: relative;
+	img{
+		width: 100%;
+	}
+	.marker{
+		position: absolute;
+		right: 37vw;
+		top: 65%;
+		width: 5vw;
+		height: 5vh;
+		cursor: pointer;
+		.pulse {
+			display: block;
+			position: absolute;
+			top: .5rem;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background:#707070;
+			cursor: pointer;
+			box-shadow: 0 0 0 rgba(112, 112, 112, 0.9);
+			animation: pulse 2s infinite;
+			&::before{
+				position: absolute;
+				content: '';
+				left: 10px;
+				top: 10px;
+				width: 20px;
+				height: 20px;
+				background-color: #CCC06D;
+				border-radius: 50%;
+			}
+		}
+		.pulse:hover {
+		  animation: none;
+		}
+		@-webkit-keyframes pulse {
+		  0% {
+			-webkit-box-shadow: 0 0 0 0 rgba(112, 112, 112, 0.9);
+		  }
+		  70% {
+			  -webkit-box-shadow: 0 0 0 10px rgba(112, 112, 112, 0);
+		  }
+		  100% {
+			  -webkit-box-shadow: 0 0 0 0 rgba(34, 192, 60, 0);
+		  }
+		}
+		@keyframes pulse {
+		  0% {
+			-moz-box-shadow: 0 0 0 0 rgba(112, 112, 112, 0.9);
+			box-shadow: 0 0 0 0 rgba(112, 112, 112, 0.7);
+		  }
+		  70% {
+			  -moz-box-shadow: 0 0 0 10px rgba(112, 112, 112, 0);
+			  box-shadow: 0 0 0 10px rgba(112, 112, 112, 0);
+		  }
+		  100% {
+			  -moz-box-shadow: 0 0 0 0 rgba(112, 112, 112, 0);
+			  box-shadow: 0 0 0 0 rgba(112, 112, 112, 0);
+		  }
+		}
+		.markerAddress{
+			text-align: center;
+			width: 285px;
+			position: absolute;
+			top: -100px;
+			left: -125px;
+			background-color: $white;
+			@include shadow();
+			@include border-radius(2px);
+			padding: 20px;
+			opacity: 0;
+			-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+			transition: opacity 0.35s, transform 0.35s;
+			-webkit-transform: translate3d(0, 20px, 0) scale(1.1);
+			transform: translate3d(0, 20px, 0) scale(1.1);
+			@include breakpoint(mx991){
+				top: -110px;
+				left: -130px;
+			}
+			@include breakpoint(mx767){
+			    width: 245px;
+				top: -95px;
+				left: -115px;
+				padding: 18px;
+			}
+			p{
+				font-size: 14px;
+				line-height: 26px;
+				@include breakpoint(mx767){
+					font-size: 12px;
+				}
+			}
+			.close-X{
+				font-size: 14px;
+				line-height: 26px;
+				position: absolute;
+				right: 15px;
+				top: 5px;
+			}
+			&.show{
+				z-index: 0;
+				opacity: 1;
+				-webkit-transform: translate3d(0, 0, 0) scale(1);
+				transform: translate3d(0, 0, 0) scale(1);
+				&::after{
+					position: absolute;
+					bottom: -20px;
+					right: 0;
+					left: 0;
+					margin: 0 auto;
+					content: '';
+					width: 0;
+					height: 0;
+					border-left: 20px solid transparent;
+					border-right: 20px solid transparent;
+					border-top: 20px solid $white;
+				}
+			}
+		}
+	}
+}

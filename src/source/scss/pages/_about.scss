@@ -1,0 +1,77 @@
+.aboutHolder{
+	background-color: $white;
+	.banerHolder{
+		@include breakpoint(mx767){
+			max-width: 100%;
+			padding: 0;
+			height: 200px;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	.articleHolder{
+		padding: 45px 0;
+		border-bottom: solid 2px #B2B2B2;
+		@include breakpoint(mx767){
+			display: block!important;
+		}
+		.titleHold {
+			flex: 0 0 25%;
+			max-width: 25%;
+			h2{
+				@include lightColourTitle();
+				font-size: 35px;  
+				@include breakpoint(mx1024){
+					padding-right: 25px;
+				}
+			}
+		}
+		.articleMain{ 
+			h3{
+				@include themefont(bold);
+				font-size: 26px;
+				line-height: 40px;
+				margin-bottom: 20px;
+				@include breakpoint(mx991){
+					font-size: 16px;  
+					line-height: 24px;
+				}
+			}
+			.clientLogoRow{
+				padding: 25px 0;
+				ul{
+					display: flex;
+					flex-wrap: wrap;
+					li{
+						padding: 15px 0;  
+					    text-align: center;
+						flex: 0 0 25%;
+						max-width: 25%;
+						display: flex !important;
+						align-items: center;
+						a{
+							margin: 0 auto;
+							img{
+								max-width: 80%;
+							}
+						}
+					}
+				}
+			}
+			.teamRow{
+				padding-top: 60px;
+				.teamList{
+					flex: 0 0 33.33%;
+					max-width: 33.33%;
+					img{
+						width: 100%;
+					}
+				}
+			}
+			a{
+				@include viewMoreButton();
+			}
+		}
+	}
+}

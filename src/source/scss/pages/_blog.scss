@@ -1,0 +1,377 @@
+.blogHolder{
+    padding-bottom: 50px;
+	background-color: $white;
+	.navHolder__Blog{
+		margin-bottom: 40px;
+		button{
+			margin-right: 25px;
+			padding: 0;
+			@include themefont(regular);
+			background: border-box;
+			border: none;
+			position: relative;
+			font-size: 17px;
+			@include transition(all .4s);
+			&::after{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				content: '';
+				width: 0;
+				height: 2px;
+				opacity: 0;
+				background-color: $templat-active;
+				@include transition(all .4s);
+			}
+			&:hover{
+				@include transition(all .4s);
+				&::after{
+					opacity: 1;
+					width: 100%;
+				}
+			}
+			&.mixitup-control-active{
+				&::after{
+					opacity: 1;
+					width: 100%;
+				}
+			}
+		}
+	}
+	.xaqTab__Container{
+	    display: flex;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+		.xaqTab__List{
+			flex: 0 0 33.3333333333%;
+			max-width: 33.3333333333%;
+			padding-right: 15px;
+			padding-left: 15px;
+			margin-bottom: 60px;
+			figure{
+				overflow: hidden;
+				img{
+					width: 100%;
+				}
+			}
+			figcaption{
+				h3{
+					@include themefont(bold);
+					font-size: 20px;
+					line-height: 30px;
+				}
+				a{
+					/*&.readmore{
+
+						
+						
+						color: $white;
+
+						@include border-radius(2px);
+						border: solid 1px #171717;  
+						
+						span{
+							font-size: 14px;
+							@include themefont(bold);
+						}
+
+						&:hover{
+							color: #171717;
+							background-color: $white;
+						}
+					}*/
+					
+					&.readmore{
+						margin-top: 35px;
+					    padding: 0 20px;
+						position: relative;
+						display: flex;
+						align-items: center;
+						overflow: hidden;
+						width: 150px;
+						height: 50px;
+						max-width: 250px;
+						text-transform: uppercase;
+						border: 1px solid #171717;
+						color: #fff;
+						background-color: #171717;
+						svg{
+							margin-left: auto;
+							position: relative;
+							z-index: 1;
+							box-sizing: border-box;
+							transition: 0.5s ease-in-out;
+						}
+					}
+					&.readmore:before, &.readmore:after,
+					&.readmore i:before,
+					&.readmore i:after {
+						content: '';
+						position: absolute;
+						top: 0;
+						width: 25.25%;
+						height: 0;
+						background-color: #fff;
+						box-sizing: border-box;
+						transition: 0.5s ease-in-out;
+					}
+					&.readmore:before {
+						left: 0;
+					}
+					&.readmore:after {
+						left: 50%;
+					}
+					&.readmore i:before, &.readmore i:after {
+						top: auto;
+						bottom: 0;
+					}
+					&.readmore i:before{
+						left: 25%;
+					}
+					&.readmore i:after{
+						left: 75%;
+					}
+					&.readmore span{
+						color: #fff;
+						position: relative;
+						z-index: 1;
+						box-sizing: border-box;
+						transition: 0.5s ease-in-out;
+						
+					}
+					&.readmore:hover {
+						color: #171717;
+						span{
+							color: #171717;
+						}
+						svg{
+							path{
+								fill: #171717;
+							}
+						}
+					}
+					&.readmore:hover:before, &.readmore:hover:after,
+					&.readmore:hover i:before,
+					&.readmore:hover i:after {
+						height: 80px;
+						box-sizing: border-box;
+						transition: 0.5s ease-in-out;
+					}
+				}
+			}
+		}
+	}
+	.blogerTitle{
+	    margin-bottom: 28px;
+		h3{
+			@include themefont(bold);
+			font-size: 18px;
+			line-height: 30px;
+		}
+	}
+	.blogerHolder{
+		display: flex;
+		align-items: center;
+		figure{
+			margin-bottom: 0;  
+			img{
+				width: 55px;
+				height: 55px;
+				@include border-radius(50%);  
+			}
+		}
+		.blogerDetail{
+			padding-left: 20px;
+			strong{
+				@include themefont(bold);
+				font-size: 15px;
+			}
+			p{
+				font-size: 12px;
+			}
+		}
+	}
+	.mediaHolder{
+		@include breakpoint(mn1200){
+			position: absolute;
+			bottom: 0;
+			left: 15px;
+		}
+		p{
+			color: #CBBF6D;
+			@include themefont(bold);
+			font-size: 16px;
+			line-height: 30px;
+			margin-bottom: 15px;
+		}
+		.socialRow{
+			a{
+				display: block;
+				margin-right: 20px;
+				background-color: $white;
+				svg{
+
+					path{
+						fill: $black;
+					}
+					rect{
+						fill: $black;
+					}
+					#twitter-2{  
+						rect{
+							fill: $black;
+						}
+						path{
+							fill: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+	.blogBaner{
+		@include breakpoint(mx1199){
+			order: -1;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	.blogContent{
+	    position: relative;
+		padding-top: 45px;
+		p{
+			margin-bottom: 30px;
+		}
+		.blogContentFooter{    
+			width: 100%;
+			@include breakpoint(mn1200){
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+			strong{}
+			p{
+				@include themefont(bold);
+				font-size: 16px;
+				color: #CBBF6D;
+			}
+			.socialRow{
+				a{
+					display: block;
+					margin-right: 20px;
+					background-color: $white;
+					svg{
+
+						path{
+							fill: $black;
+						}
+						rect{
+							fill: $black;
+						}
+						#twitter-2{  
+							rect{
+								fill: $black;
+							}
+							path{
+								fill: $white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.blogAcordian{
+		padding-top: 45px;
+		.card{
+			border: none;
+			.card-header{
+				@include border-radius(0);
+				padding: 0;
+				border: none;
+				button{
+				    padding: 15px 35px 16px 35px;
+					@include themefont(bold);
+					text-align: left;
+				    text-decoration: none;
+					border: none;
+					@include border-radius(3px);
+					display: block;
+					width: 100%;
+					color: $white;
+					background-color: #CBBF6D;
+				}
+			}
+		}
+		.sidebar{
+			.card{
+				margin-bottom: 15px;
+				.card-body{
+					padding: 15px 0;
+					.cardCollection{
+						@include border-radius(3px);
+						padding: 16px 25px;
+						margin-bottom: 20px;
+						background-color: #F6F6F6;
+						strong{
+							@include themefont(bold);
+							font-size: 15px;
+						}
+					}
+				}
+			}
+		}
+		.newsletter{
+			padding: 30px;
+			@include border-radius(3px);
+			background-color: $black;
+			h5{
+				@include themefont(bold);
+				font-size: 20px;
+				color: $white;
+			}
+			h4{
+				@include themefont(bold);
+				font-size: 30px;
+				color: $white;
+				margin-bottom: 25px;
+			}
+			.inputGroup{
+				position: relative;
+				margin-bottom: 15px;
+				input{
+				    height: 45px;
+					width: 100%;
+					background: transparent;
+					border: none;
+					border-bottom: solid 1px $white;
+				}
+				label{
+					height: 25px;
+					display: inline-block;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					margin: auto 0;
+					color: $white;
+				}
+			}
+			.formSubmit{
+			    padding-top: 15px;
+				button[type="submit"]{
+					@include themefont(bold);
+					font-size: 19px;
+					height: 55px;
+				    width: 100%;
+					border: none;
+					color: $white;
+					background-color: #CCC06D;
+					@include border-radius(3px);
+				}
+			}
+		}
+	}
+}
+

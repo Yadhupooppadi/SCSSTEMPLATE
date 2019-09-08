@@ -1,0 +1,126 @@
+.footerHolder{
+    padding: 100px 0 70px 0;
+	background-color: $black;
+	@include breakpoint(mx767){
+		padding: 40px 0 25px 0;
+	}
+	.brand-Icon{
+		display: inline-block;
+		@include breakpoint(mx767){
+			margin-bottom: 20px;
+			img{
+				max-width: 140px;
+			}
+		}
+	}
+	.articleSection-01{
+		border-bottom: solid 1px #3a372e;
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+		p{
+			color: $white;
+			font-size: 18px;
+			@include breakpoint(mx767){
+				font-size: 13px;
+			}
+		}
+		a{
+			&.brand-link{
+				color: $white;
+				font-size: 26px;
+				margin-top: 20px;
+				display: inline-block;
+				@include breakpoint(mx767){
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	.addressRow{
+		@include breakpoint(mx600){
+			display: block!important;
+		}
+		.addressCol{
+		    flex: 0 0 33.3333333333%;
+			max-width: 33.3333333333%;
+			@include breakpoint(mx600){
+				flex: 0 0 100%;
+				max-width: 100%;
+				border-bottom: solid 1px #3a372e;
+				margin-bottom: 30px;
+				padding-bottom: 30px;
+			}
+			h4{
+				@include themefont(bold);
+				color: $white;
+				font-size: 18px;
+				margin-bottom: 18px;
+				@include breakpoint(mx767){
+
+				}
+			}
+			p{
+				color: $white;
+				font-size: 12px;
+			}
+			a{
+				display: block;
+				color: $white;
+			}
+			.socialRow{
+				.socialList{
+					margin-right: 15px;
+					font-size: 14px;
+					color: $black;
+					//background-color: $white;
+					padding: 0px;
+					text-align: center;
+					@include border-radius(2px);
+					svg{
+						width: 27px;
+						height: 27px;
+						@include border-radius(2px);
+						path{
+							fill: $white;
+						}
+					}
+					#twitter{
+						path{
+							fill:#171717;
+						}
+					}
+				}
+			}
+		}
+	}
+	.copyRight{
+		padding-top: 50px;
+		@include breakpoint(mx767){
+			padding-top: 0;
+		}
+		strong{
+			color: $white;
+			text-transform: uppercase;
+			font-size: 11px;
+			color: #545454;
+			font-weight: normal;
+		}
+		p{
+			color: $white;
+			font-size: 10px;
+			color: #545454;
+			line-height: 7px;
+		}
+	}
+	.ftrLinks{
+		padding-top: 50px;
+		@include breakpoint(mx767){
+			padding-top: 15px;
+		}
+		a{
+			color: $white;
+			text-transform: uppercase;
+			font-size: 10px;
+		}
+	}
+}

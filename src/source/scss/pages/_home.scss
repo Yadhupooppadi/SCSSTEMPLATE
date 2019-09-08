@@ -1,0 +1,421 @@
+.homeHolder{
+	padding-top: 105px;
+	background-color: $themeBg01;
+	@include breakpoint(mx767){
+		padding-top: 80px;  
+	}
+	.xaQ-Content{
+		.banerContent{
+			padding-top: 5.5vw;
+			padding-bottom: 9vw; 
+			h1{
+				@include themefont(black);
+				@include breakpoint(mx991){
+					font-size: 26px;
+				}
+			}
+			
+		} 
+	}
+	.banerHolder{
+		position: relative;
+		z-index: 0;
+		@include breakpoint(mn768){
+			padding-top: 100px;
+		}
+		.xaQ-baner{
+			@include breakpoint(mx767){
+				display: block!important;
+			}
+			.sliderContent{
+				padding-right: 15px;
+				@include breakpoint(mx767){
+					padding-right: 0px;
+					margin-bottom: 50px;
+				}
+				h2{
+					@include themefont(black);
+					font-size: 50px;
+					@include breakpoint(mx1024){
+						font-size: 40px;
+					}
+					@include breakpoint(mx767){
+						font-size: 30px;
+					}
+				}
+				p{
+					font-size: 22px;
+					line-height: 38px;
+					opacity: .7;
+					margin-top: 30px;
+					@include breakpoint(mx767){
+						font-size: 18px;
+						line-height: 25px;
+					}
+				}
+				.linkWrp{
+					padding-top: 30px;
+					p{
+						font-size: 15px;
+					}
+					a{
+						color: $black;
+						font-size: 30px;
+						margin: 0 10px;
+						@include breakpoint(mx991){
+							color: $white;
+						}
+					}
+				}
+			}
+			img{
+				max-width: 60%;
+				@include breakpoint(mn768){
+					margin-left: auto;
+				}
+				@include breakpoint(mx767){
+					max-width: 100%;
+				}
+			}
+		}
+	}
+	.xaQ-articleSection{
+		padding: 80px 0;
+		background-color: $white;
+		@include breakpoint(mx991){
+			padding: 40px 30px;
+		}
+		h2{
+			@include lightColourTitle();
+		}
+		.xaQ-Article{
+			padding-left: 100px;
+			@include breakpoint(mx991){
+				padding-left: 0px;
+			}
+			p{
+				font-size: 18px;
+				font-size: 28px;
+				line-height: 40px;
+				color: $black;
+				@include breakpoint(mx991){
+					font-size: 18px;
+					line-height: 28px;
+				}
+			}
+			a{
+				@include viewMoreButton();
+			}
+		}
+	}
+	.xaQ-ServiceHoldre{
+	    position: relative;
+		overflow: hidden;
+		.service-LayerHolder{
+		    display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;    
+			-webkit-box-align: stretch;  
+			-ms-flex-align: stretch;
+			align-items: stretch;
+			position: relative;
+			z-index: 1;
+			@include breakpoint(mx991){
+				flex: 0 0 100%;
+				max-width: 100%;
+				display: block;
+			}
+			.listedLayer{
+				cursor: pointer;
+			    display: block;
+			    max-width: 25%;
+				-webkit-box-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				position: relative;
+				@include breakpoint(mx991){
+					flex: 0 0 100%;
+					max-width: 100%;
+				}
+				@include breakpoint(mn992){
+					&::before{
+						content: " ";
+						float: left;
+						padding-top: 125.49153%;
+					}
+					&::after{
+						content: " ";
+						display: table;
+						clear: both;
+					}
+				}
+				figcaption{
+					height: 100%;
+					padding-top: 15%;
+					padding-bottom: 15%;
+					width: 69.49153%;
+					position: relative;
+					margin: 0 auto;
+					width: 78.75%;
+					z-index: 1;
+					opacity: .2;
+					@include breakpoint(mx1279){
+						padding-bottom: 40%;
+					}
+					@include breakpoint(mx991){
+						width: 100%;
+						padding: 30px;
+						opacity: 1;
+					}
+					.slNo{
+						color: $serviceListColourHome;
+						margin-bottom: 15px;
+					}
+					h3{
+						color: $serviceListColourHome;
+						font-weight: normal;
+						font-size: 18px;
+						padding-bottom: 15px;
+						margin-bottom: 15px;
+						position: relative;
+						&::after{
+							content: '';
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							width: 0;
+							height: 1px;
+							background-color: $white;
+							@include transition(all .4s);
+						}
+						@include breakpoint(mx991){
+							&::after{
+								width: 150px;
+							}
+						}
+					}
+					p{
+						color: $serviceListColourHome;
+						@include breakpoint(mn992){
+							-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+							transition: opacity 0.35s, transform 0.35s;
+							opacity: 0;
+							-webkit-transform: translate3d(0,10px,0);
+							transform: translate3d(0,10px,0);
+						}
+					}
+				}
+				.linkCol{
+					&.viewMore{
+					    opacity: .6;
+						overflow: hidden;
+						border: solid 1px $white;
+					    width: 50px;
+						height: 50px;
+						position: absolute;					   
+						bottom: 50px;
+						left: 40px;
+						color: $black;
+						display: inline-block;
+						-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+						transition: opacity 0.35s, transform 0.35s;
+						-webkit-transform: translate3d(0,10px,0);
+						transform: translate3d(0,10px,0);
+						text-transform: uppercase;
+						font-size: 12px;
+						z-index: 1;
+						@include transition(all .4s);
+						@include breakpoint(mx1024){
+							display: none!important;
+						}
+						svg{
+							fill: #fff;
+							margin-left: 5px;
+							width: 20px;
+							height: 20px;
+							margin-left: auto;
+							margin-right: 12px;
+						}
+						span{
+							color: $white;
+							position: absolute;
+							left: -65px;
+							opacity: 0;
+							@include transition(all .4s);
+						}
+						
+					}
+				}
+				.listedLayer-View{
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					@include breakpoint(mx991){
+						display: none;
+					}
+					figure{
+						opacity: .8;
+						position: absolute;
+						height: 100%;
+						width: 100%;
+						-webkit-transform: translate3d(0,0,0);
+						transform: translate3d(0,0,0);
+						@include transition(all .4s);
+						margin: 0;
+						img{
+							width: 100%;
+						}
+					}
+				}
+				&.activeHolder{
+					
+				}
+				&:hover{
+					figcaption{
+						opacity: 1;
+						h3{
+							&::after{
+								width: 150px;
+							}
+						}
+						p{
+							opacity: 1;
+							-webkit-transform: translate3d(0,0,0);
+							transform: translate3d(0,0,0);
+							-webkit-transition-delay: 0.15s;
+							transition-delay: 0.15s;
+						}
+						a{
+							&.viewMore{
+								opacity: 1;
+								-webkit-transform: translate3d(0,0,0);
+								transform: translate3d(0,0,0);
+								-webkit-transition-delay: 0.15s;
+								transition-delay: 0.15s;
+							}
+						}
+					}
+					.listedLayer-View{
+						figure{
+							opacity: 1;
+							-webkit-transform: translate3d(0,0,0);
+							transform: translate3d(0,0,0);
+						}
+					}
+					.linkCol{
+						&.viewMore{
+							width: 150px;
+							opacity: 1;
+							span{
+								font-size: 13px;
+								left: 15px;
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.xaQ-projectHolder{
+		padding: 100px 0;
+		padding-left: 7.5%;
+		background-color: $white;
+		@include breakpoint(mx767){
+			padding: 40px 25px;
+		}
+		h2{
+			@include lightColourTitle();
+		}
+		.projectCarosal{
+			.projectList{
+				margin-right: 20px;
+				figure{
+					overflow: hidden;
+					background-color: #2f3238;
+					img{
+						max-height: 390px;
+						-webkit-transition: opacity 1s, -webkit-transform 1s;
+						transition: opacity 1s, transform 1s;
+						-webkit-backface-visibility: hidden;
+						backface-visibility: hidden;	
+						@include breakpoint(mx767){
+							max-height: 150px;
+						}	
+					}
+				}
+				.captionHolder{
+					padding-top: 30px;
+					@include breakpoint(mx767){
+						padding-top: 0;
+					}
+					strong{
+						@include themefont(bold);
+						display: block;
+						font-size: 15px;
+						color: $black;
+					}  
+					p{
+						font-size: 12px;
+						font-weight: normal;
+						color: $black;
+					}
+				}
+				&:hover{
+					figure{
+						img{
+							opacity: 0.4;
+							-webkit-transform: scale3d(1.1,1.1,1);
+							transform: scale3d(1.1,1.1,1);
+						}
+					}
+				}
+			}
+			.slick-prev{
+				width: 50px;
+				height: 50px;
+				left: auto;
+				top: -70px;
+				right: 115px;
+				@include transition (all .4s);
+				@include breakpoint(mx767){
+					width: 30px;
+					height: 30px;
+					right: 40px;
+					top: -60px;
+				}
+				path{
+					fill: $black;
+				}
+				&:hover{
+					opacity: .5;
+				}
+			}
+			.slick-next{
+				width: 50px;
+				height: 50px;
+				left: auto;
+				top: -70px;
+				right: 50px;
+				@include transition (all .4s);
+				@include breakpoint(mx767){
+					width: 30px;
+					height: 30px;
+					right: 0px;
+					top: -60px;
+				}
+				path{
+					fill: $black;
+				}
+				&:hover{
+					opacity: .5;
+				}
+			}
+		}
+		a{
+			@include viewMoreButton();
+		}
+	}
+}  

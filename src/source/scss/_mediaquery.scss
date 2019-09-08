@@ -1,0 +1,472 @@
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1350px) {}
+
+@media (min-width: 1440px) {}
+
+@media (min-width: 1600px) {}
+
+@media (max-height: 600px) and (min-width: 768px) {
+    section.bnr-wrp {
+        height: initial;
+    }
+
+    .carousel {
+        height: calc(100vh + #{$quicklinkhieght});
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    /*================ Home Page Starts =================*/
+    /*--------------------Header Starts --------------------------*/
+
+    ul.tpcontact,
+    ul.tpmnu {
+        &:not(:last-child) {
+            margin-right: cr(15px);
+        }
+    }
+
+    ul.tpcontact {
+        li {
+            font-size: cr(12px);
+
+            &:not(:last-child) {
+                margin-right: cr(15px);
+            }
+
+            i {
+                margin-right: cr(6px);
+            }
+        }
+    }
+
+    ul.tpmnu {
+        li {
+            padding: 0 cr(15px);
+
+            a {
+                font-size: cr(12px);
+
+                i {
+                    margin-left: cr(6px);
+                }
+            }
+        }
+    }
+
+    /*--------------------Header Ends --------------------------*/
+    /*--------------------Carousel Starts --------------------------*/
+
+    .hexagon-mn {
+        right: cr(30px);
+    }
+
+    .bnr-actions {
+        left: 0px;
+    }
+
+    /*--------------------Carousel Ends --------------------------*/
+
+    .pgabt-knw, .pgcampus-cont, .pgadmisson-mn {
+        padding-left: calc((100% - 960px) / 2);
+    }
+
+    .pgabt-det, .pgrecruters-mn {
+        padding-right: calc((100% - 960px) / 2);
+    }
+
+    .feaucourse-pg h2 span {
+        font-size: 3rem;
+    }
+
+    .pgcounter-bx h3 {
+        font-size: 3rem;
+    }
+
+    /*================ Home Page Ends =================*/
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    /*================ Home Page Starts =================*/
+    /*--------------------Header Starts --------------------------*/
+
+    ul.tpcontact {
+        display: none;
+    }
+
+    /*--------------------Header Ends --------------------------*/
+    /*--------------------Carousel Starts --------------------------*/
+
+    .hexagon-mn {
+        right: cr(30px);
+    }
+
+    .bnr-actions {
+        left: 0px;
+    }
+
+    .bnr-cptn h1 {
+        font-size: 4.5rem;
+    }
+
+    .bnr-cptn h1 em {
+        letter-spacing: .25rem;
+    }
+
+    .bnr-cptn h3 {
+        font-size: 2rem;
+    }
+
+    a.knowmore-btn, button.knowmore-btn, .knowmore-bx span.knowmore-btn {
+        @include letterSpace(16px, 250);
+    }
+
+    /*--------------------Carousel Ends --------------------------*/
+
+    .pgabt-det, .pgabt-knw {
+        padding: 3rem 2rem 4rem;
+    }
+
+    .pgabt-knw, .pgcampus-cont, .pgadmisson-mn {
+        padding-left: calc((100% - 720px) / 2);
+    }
+
+    .pgabt-det, .pgrecruters-mn {
+        padding-right: calc((100% - 720px) / 2);
+    }
+
+    .feaucourse-pg h2 span {
+        font-size: 3rem;
+    }
+
+    .pgcounter-bx h3 {
+        font-size: 2rem;
+    }
+
+    .pgcounter-bx h4 {
+        font-size: 1rem;
+    }
+
+    .pgcampus-cont h2 {
+        margin-bottom: 3rem;
+    }
+
+    section.pggal-wrp .row > *:last-child {
+        margin-top: 30px;
+    }
+
+    .foo-contact {
+        @include flex-direction(column);
+    }
+
+    ul.foosoc-ul, .foocal-bx {
+        margin-bottom: cr(30px);
+    }
+
+    /*================ Home Page Ends =================*/
+}
+
+@media screen and (min-width: 768px) {}
+
+@media (max-width: 767px) and (min-width: 200px) {
+    .container {
+        max-width: 100%;
+    }
+
+    /*================ Home Page Starts =================*/
+    /*--------------------Header Starts --------------------------*/
+
+    ul.tpcontact, ul.tpmnu {
+        display: none;
+    }
+
+    /*--------------------Header Ends --------------------------*/
+    /*--------------------Carousel Starts --------------------------*/
+    .hexagon-mn {
+        display: none;
+    }
+
+    .bnr-actions {
+        left: 15px;
+    }
+
+    .bnr-cptn .container {
+        padding-left: 5rem;
+    }
+
+    .bnr-cptn h1 {
+        font-size: 4.5rem;
+    }
+
+    .bnr-cptn h1 em {
+        letter-spacing: .25rem;
+    }
+
+    .bnr-cptn h3 {
+        font-size: 2rem;
+    }
+
+    a.knowmore-btn, button.knowmore-btn, .knowmore-bx span.knowmore-btn {
+        @include letterSpace(16px, 250);
+    }
+
+    /*--------------------Carousel Ends --------------------------*/
+
+    .pgabt-mn, section.pgcampus-wrp, section.pgrecruters-wrp {
+        @include flex-direction(column);
+    }
+
+    .pgabt-det, .pgabt-knw, .pgcampus-cont, .pgcampus-vdo, .pgadmisson-mn, .pgrecruters-mn {
+        padding: 3rem 1.5rem 4rem;
+
+        @include flexwidth(100%);
+    }
+
+    .pgcampus-vdo {
+        padding: 0;
+    }
+
+    .feaucourse-pg h2 span {
+        font-size: 3rem;
+    }
+
+    .pgcounter-bx h3 {
+        font-size: 2rem;
+    }
+
+    .pgcounter-bx h4 {
+        font-size: 1rem;
+    }
+
+    .pgcampus-cont h2 {
+        margin-bottom: 3rem;
+    }
+
+    section.pggal-wrp .row > *:last-child {
+        margin-top: 30px;
+    }
+
+    .foo-contact {
+        @include flex-direction(column);
+    }
+
+    ul.foosoc-ul, .foocal-bx {
+        margin-bottom: cr(30px);
+    }
+
+    .pgcounter-mn {
+        @include flex-wrap(wrap);
+    }
+
+    section.pgcounter-wrp {
+        padding: cr(30px) 0;
+    }
+
+    .pgcounter-bx {
+        @include flexwidth(50%);
+    }
+
+    .campusabout-det {
+        padding: 0;
+        margin-bottom: cr(30px);
+    }
+
+    .pggalmn-sldr .slick-list {
+        padding: 0;
+        margin: 0;
+    }
+
+    .pggalnews-bx {
+        @include flex-direction(column);
+        @include align-items(start);
+    }
+
+    .pggalnews-head {
+        margin-bottom: cr(20px);
+    }
+
+    .pgadmisson-bx h4 {
+        font-size: 2rem;
+
+        em {
+            font-size: 3rem;
+            line-height: 3.5rem;
+        }
+    }
+
+    .pgrecruters-inr {
+        padding-left: 0;
+    }
+
+    .pgrecruters-mn {
+        padding-bottom: 0;
+    }
+
+    .lgo-foo {
+        margin-bottom: cr(20px);
+    }
+
+    ul.foomnu-ul {
+        &.foomnumain-ul {
+            li {
+                width: 33.333%;
+            }
+        }
+    }
+
+    .foo-about p {
+        margin-bottom: cr(20px);
+    }
+
+    .foo-mnu h4 {
+        margin-top: cr(20px);
+    }
+
+    .industry-mn {
+        padding-left: 0;
+    }
+
+    /*================ Home Page Ends =================*/
+}
+
+@media (max-width: 575px) {
+    $quicklinkhieght: #{cr(90px)};
+
+    .bnr-cptn h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+
+        em {
+            letter-spacing: .15rem;
+            line-height: 2rem;
+        }
+    }
+
+    .bnr-cptn h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .bnr-actions {
+        left: 0;
+        bottom: calc(#{$quicklinkhieght} + #{cr(60px)});
+        top: initial;
+        height: initial;
+        width: 100%;
+
+        @include flex-direction(row);
+
+        .carousel-indicators {
+            @include flex-direction(row);
+
+            li {
+                &:not(:last-child) {
+                    margin: 0;
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+
+    .bnr-cptn .container {
+        padding: 0 15px;
+    }
+
+    .playpause-btn {
+        margin: 0;
+        margin-right: cr(15px);
+    }
+
+    .quicklinks-bx h4 {
+        display: none;
+    }
+
+    .pgabt-det, .pgabt-knw, .pgcampus-cont, .pgcampus-vdo, .pgadmisson-mn, .pgrecruters-mn {
+        padding: 2rem 1rem 2rem;
+    }
+
+    .pgcampus-vdo {
+        padding: 0;
+    }
+
+    .pgrecruters-mn {
+        padding-bottom: 0;
+    }
+
+    section.quickies-wrp h4 {
+        letter-spacing: 0.15rem;
+    }
+
+    .pgabtknw-det h4 {
+        font-size: 2.5rem;
+    }
+
+    h2.mn-h2 {
+        font-size: 2.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .pgabt-det p {
+        font-size: cr(15px);
+        line-height: cr(24px);
+    }
+
+    .foo-contact {
+        padding-bottom: 0rem;
+    }
+
+    .campusabout-mn h2 {
+        font-size: 3.25rem;
+        margin-right: 1rem;
+    }
+
+    ul.foomnu-ul {
+        &.foomnumain-ul {
+            li {
+                width: 50%;
+            }
+        }
+    }
+
+    section.pggal-wrp {
+        padding: 3rem 0;
+    }
+
+    ul.foosoc-ul li a {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .feacourse-mn {
+        margin-bottom: cr(30px);
+    }
+}
+
+@media (max-width: 450px) {}
+
+@media (max-width: 360px) {
+    ul.foomnu-ul {
+        &.foomnumain-ul {
+            li {
+                width: 100%;
+            }
+        }
+    }
+    .pgcounter-bx {
+        @include flexwidth(100%);
+    }
+    .pgcounter-bx h3 span {
+        line-height: 4rem;
+    }
+    .pgcounter-mn {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 300px) {}
