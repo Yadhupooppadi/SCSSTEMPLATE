@@ -32,7 +32,7 @@
     "countup.js": "^1.9.3",
     "desandro-classie": "^1.0.1",
     "inview": "0.0.11",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-circle-progress": "^1.2.2",
     "node-sass": "^4.12.0",
     "npm": "^6.10.2",
